@@ -4,14 +4,15 @@ import { SobreScreen } from "../screens/SobreScreen";
 import { Local } from "../screens/LocalScreen";
 import { Configuracao } from "../screens/ConfiguraScreen";
 
-const Stack = createBottomTabNavigator();
+
+const Tab = createBottomTabNavigator();
 export const RootNavigation = () => {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name={"Home"} component={HomeScreen} />
-            <Stack.Screen name={"Sobre"} component={SobreScreen} />
-            <Stack.Screen name={"Local"} component={Local} />
-            <Stack.Screen name={"Configuracao"} component={Configuracao} />
-        </Stack.Navigator>
+        <Tab.Navigator>
+            <Tab.Screen name={"Home"} component={HomeScreen}  />
+            <Tab.Screen name={"Sobre"} component={SobreScreen} />
+            <Tab.Screen name={"Local"} component={Local} />
+            <Tab.Screen name={"Configuracao"}  component={Configuracao} />
+        </Tab.Navigator>
     );
 };
